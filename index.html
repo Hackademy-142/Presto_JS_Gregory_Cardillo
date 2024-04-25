@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Presto Js</title>
+    <!-- SWIPER CSS  -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <!-- AoS CSS  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- GOOGLE FONTS  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ojuju:wght@200..800&family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
+    <!-- BOOTSTRAP ICONS  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- CDN BOOTSTRAP  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- MY CSS  -->
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-P fixed-top navbar-dark transition">
+        <div class="container-fluid">
+          <a class="navbar-brand ms-5" href="#">Presto.it</a>
+          <button class="navbar-toggler hamburgerBtn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./articoli.html">Articoli</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#categories">Chi Siamo</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contattaci</a>
+              </li>
+              
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Categorie
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="navbar-nav me-5 fs-4">
+              <li class="nav-item">
+                <a class="nav-link" href="#"><i class="bi bi-person-fill"></i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"><i class="bi bi-cart-fill"></i></a>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </nav>
+    <!-- FINE NAVBAR -->
+
+    <!-- HEADER  -->
+    <header class="container-fluid ">
+        <div class="row justify-content-center align-items-center masthead">
+            <!-- Colonna Titolo  -->
+            <div class="col-12 col-md-4 p-5">
+                <h1 class="display-1 text-white title-font text-center">Storia Orientale, Tesori Eterni</h1>
+                <h4 class="text-secondary fw-bold">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi nostrum accusantium nemo. Voluptatum ratione nesciunt labore ducimus architecto delectus maiores deleniti. Perferendis, ut. Officiis, dicta laudantium quo veniam fugit a!</h3>
+                <div class="d-flex flex-column flex-md-row justify-content-center">
+                  <button class="btnCompra mt-5 m-lg-5">COMPRA ORA</button>
+                  <button class="btnEsplora my-5 m-lg-5">ESPLORA</button>
+                </div>
+            </div>
+            <!-- Colonna IMAGE  -->
+            <div class="col-12 col-md-4 p-5 d-none d-lg-block">
+                <!-- <img class="img-header" src="./media/forniture.png" alt=""> -->
+                <img class="img-test" src="./media/circle.jpg" alt="">
+            </div>
+        </div>
+        <div class="row boxQuote d-flex align-items-center">
+            <div class="col-12 p-5">
+                <h2 class="title-font color-P text-center">Esplora l'arte millenaria e la ricca storia dell'antiquariato orientale attraverso una collezione unica di tesori culturali e artistici. Tutto a portata di un click!</h2>
+            </div>
+        </div>
+    </header>
+    <!--FINE HEADER  -->
+
+    <!-- ULTIMI ANNUNCI  -->
+    <section class="container my-5">
+      <div class="row">
+        <div class="col-12 my-5">
+          <h2 data-aos="zoom-in-up" class="title-font display-1 color-P text-center border-bottom">ULTIMI ANNUNCI</h2>
+      </div>
+      </div>
+      <div id="cardsWrapper" class="row justify-content-evenly">
+      </div>
+    </section>
+    <!-- FINE ULTIMI ANNUNCI  -->
+
+    <!-- SEZIONE CATEGORIE  -->
+    <section class="container my-5">
+        <div class="row justify-content-evenly overflow-hidden">
+            <div class="col-12 my-5">
+                <h2 data-aos="zoom-in-up" id="categories" class="title-font display-1 color-P text-center border-bottom">CATEGORIE</h2>
+            </div>
+            <div  data-aos="fade-right" class="col-6 col-lg-3 my-5 mx-lg-1">
+                <img class="img-category" src="https://picsum.photos/200" alt="">
+            </div>
+            <div data-aos="fade-down" data-aos-delay="100" class="col-6 col-lg-3 my-5 mx-lg-1">
+                <img class="img-category" src="https://picsum.photos/201" alt="">
+            </div>
+            <div data-aos="fade-left" data-aos-delay="200" class="col-6 col-lg-3 my-5 mx-lg-1">
+                <img class="img-category" src="https://picsum.photos/202" alt="">
+            </div>
+            <div data-aos="zoom-in-right" data-aos-delay="500" class="col-6 col-lg-3 my-5 mx-lg-1">
+                <img class="img-category" src="https://picsum.photos/203" alt="">
+            </div>
+            <div  data-aos="zoom-in-up" data-aos-delay="400" class="col-6 col-lg-3 my-5 mx-lg-1">
+                <img class="img-category" src="https://picsum.photos/204" alt="">
+            </div>
+            <div data-aos="zoom-in-left" data-aos-delay="300" class="col-6 col-lg-3 my-5 mx-lg-1">
+                <img class="img-category" src="https://picsum.photos/205" alt="">
+            </div>
+        </div>
+      </section>
+    <!-- FINE SEZIONE CATEGORIE  -->
+
+    <!-- SEZIONE NUMERI  -->
+    <section class="container my-5">
+        <div class="row justify-content-evenly">
+            <div class="col-12 my-5">
+                <h2 data-aos="zoom-in-up" class="title-font display-1 color-P text-center border-bottom">I NOSTRI NUMERI</h2>
+            </div>
+            <div class="col-10 col-lg-2 my-2 boxNumeri d-flex flex-column align-items-center justify-content-center">
+                <h6 class="fs-3">Articoli:</h6>
+                <p  class="fs-3"><span id="numArticles">0</span>+</p>
+            </div>
+            <div class="col-10 col-lg-2 my-2 boxNumeri d-flex flex-column align-items-center justify-content-center">
+                <h6 class="fs-3">Utenti:</h6>
+                <p  class="fs-3"><span id="numUsers">0</span>+</p>
+            </div>
+            <div class="col-10 col-lg-2 my-2 boxNumeri d-flex flex-column align-items-center justify-content-center">
+                <h6 class="fs-3">Commenti:</h6>
+                <p class="fs-3"><span id="numComments">0</span>+</p>
+            </div>
+        </div>
+      </section>
+    <!-- FINE SEZIONE NUMERI  -->
+
+    <!-- SEZIONE RECENSIONI  -->
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+            <!-- Swiper -->
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="d-flex flex-column justify-content-center p-3 cardReview">
+                    <h3 class="text-center fw-bold">Denis Parise</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam molestias eaque tenetur explicabo, in sed deserunt, placeat autem laudantium, culpa facere nesciunt et libero. Quibusdam repellat delectus quo omnis officiis!</p>
+                    <div class="d-flex justify-content-center">
+                      <i class="bi fs-3 text-warning bi-star-fill star"></i>
+                      <i class="bi fs-3 text-warning bi-star-fill star"></i>
+                      <i class="bi fs-3 text-warning bi-star-fill star"></i>
+                      <i class="bi fs-3 text-warning bi-star-half star"></i>
+                      <i class="bi fs-3 text-warning bi-star star"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="d-flex flex-column justify-content-center p-3 cardReview">
+                    <h5 class="text-center">Flavia Vignanelli</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam molestias eaque tenetur explicabo, in sed deserunt, placeat autem laudantium, culpa facere nesciunt et libero. Quibusdam repellat delectus quo omnis officiis!</p>
+                    <div class="d-flex justify-content-center">
+                      <i class="bi fs-3 text-warning bi-star-fill"></i>
+                      <i class="bi fs-3 text-warning bi-star-fill"></i>
+                      <i class="bi fs-3 text-warning bi-star-fill"></i>
+                      <i class="bi fs-3 text-warning bi-star-half"></i>
+                      <i class="bi fs-3 text-warning bi-star"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="d-flex flex-column justify-content-center p-3 cardReview">
+                    <h5 class="text-center">Michele Sette</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam molestias eaque tenetur explicabo, in sed deserunt, placeat autem laudantium, culpa facere nesciunt et libero. Quibusdam repellat delectus quo omnis officiis!</p>
+                    <div class="d-flex justify-content-center">
+                      <i class="bi fs-3 text-warning bi-star-fill"></i>
+                      <i class="bi fs-3 text-warning bi-star-fill"></i>
+                      <i class="bi fs-3 text-warning bi-star-fill"></i>
+                      <i class="bi fs-3 text-warning bi-star-fill"></i>
+                      <i class="bi fs-3 text-warning bi-star"></i>
+                    </div>
+                    
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="d-flex flex-column justify-content-center p-3 cardReview">
+                    <h5 class="text-center">Michele Sette</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam molestias eaque tenetur explicabo, in sed deserunt, placeat autem laudantium, culpa facere nesciunt et libero. Quibusdam repellat delectus quo omnis officiis!</p>
+                    <div class="d-flex justify-content-center">
+                      <i class="bi fs-3 text-warning bi-star-fill"></i>
+                      <i class="bi fs-3 text-warning bi-star-fill"></i>
+                      <i class="bi fs-3 text-warning bi-star-fill"></i>
+                      <i class="bi fs-3 text-warning bi-star-half"></i>
+                      <i class="bi fs-3 text-warning bi-star"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="d-flex flex-column justify-content-center p-3 cardReview">
+                    <h5 class="text-center">Michele Sette</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam molestias eaque tenetur explicabo, in sed deserunt, placeat autem laudantium, culpa facere nesciunt et libero. Quibusdam repellat delectus quo omnis officiis!</p>
+                    <div class="d-flex justify-content-center">
+                      <i class="bi fs-3 text-warning bi-star-fill"></i>
+                      <i class="bi fs-3 text-warning bi-star-fill"></i>
+                      <i class="bi fs-3 text-warning bi-star-fill"></i>
+                      <i class="bi fs-3 text-warning bi-star-half"></i>
+                      <i class="bi fs-3 text-warning bi-star"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <!-- FINE SEZIONE RECENSIONI  -->
+
+    <!-- FOOTER  -->
+    <div class="container mt-5 pt-5">
+      <footer class="pt-5">
+        <div class="row">
+          <div class="col-6 col-md-2 mb-3">
+            <h4 class="color-P title-font">Section</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+            </ul>
+          </div>
+    
+          <div class="col-6 col-md-2 mb-3">
+            <h4 class="color-P title-font">Section</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+            </ul>
+          </div>
+    
+          <div class="col-6 col-md-2 mb-3">
+            <h4 class="color-P title-font">Section</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+            </ul>
+          </div>
+    
+          <div class="col-md-5 offset-md-1 mb-3">
+            <form>
+              <h4 class="color-P title-font">Subscribe to our newsletter</h5>
+              <p>Monthly digest of what's new and exciting from us.</p>
+              <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                <label for="newsletter1" class="visually-hidden">Email address</label>
+                <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                <button class="btn btn-danger" type="button">Subscribe</button>
+              </div>
+            </form>
+          </div>
+        </div>
+    
+        <div class="d-flex flex-column flex-sm-row justify-content-between pt-4 mt-4 border-top">
+          <p>&copy; 2024 Company, Inc. All rights reserved.</p>
+          <ul class="list-unstyled d-flex">
+            <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
+            <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
+            <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"/></svg></a></li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+    <!-- FINE FOOTER  -->
+
+
+
+    <!-- SWIPER JS  -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- AoS JS  -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <!-- BOOTSTRAP JS  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- MY JS  -->
+    <script src="./main.js"></script>
+  </body>
+</html>
